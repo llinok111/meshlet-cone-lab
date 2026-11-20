@@ -9,3 +9,5 @@ __pycache__/
 *.png
 *.jpg
 .DS_Store
+.model-patch.yml
+state/
