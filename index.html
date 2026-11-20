@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>meshlet-cone-lab — cone-culled meshlets</title>
+<style>
+  html,body{margin:0;height:100%;background:#0b0e14;color:#dbe4f0;font:13px/1.45 ui-monospace,Menlo,monospace;overflow:hidden}
+  #app{position:fixed;inset:0}
+  #hud{position:fixed;left:16px;top:14px;background:rgba(12,17,26,.86);border:1px solid #243044;border-radius:10px;padding:12px 14px;min-width:300px}
+  #hud h1{font-size:14px;margin:0 0 8px;color:#8fd3ff;letter-spacing:.4px}
+  .row{display:flex;justify-content:space-between;gap:18px}
+  .k{color:#7d8ba1}.v{color:#eaf3ff;font-variant-numeric:tabular-nums}
+  #legend{position:fixed;left:16px;bottom:14px;color:#8494ab}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+  #err{position:fixed;left:16px;top:50%;color:#ff8a8a;max-width:520px;display:none}
+</style>
+<script type="importmap">
+{"imports":{
+  "three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+}}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="hud">
+  <h1>meshlet-cone-lab · live cull map</h1>
+  <div class="row"><span class="k">meshlets</span><span class="v" id="m-total">–</span></div>
+  <div class="row"><span class="k">culled by normal cone</span><span class="v" id="m-culled">–</span></div>
+  <div class="row"><span class="k">triangle workload removed</span><span class="v" id="m-tri">–</span></div>
+  <div class="row"><span class="k">exact all-backfacing (oracle)</span><span class="v" id="m-exact">–</span></div>
+  <div class="row"><span class="k">visible triangles lost</span><span class="v" id="m-false">–</span></div>
+  <div class="row"><span class="k">cone tests / triangle tests</span><span class="v" id="m-tests">–</span></div>
+</div>
+<div id="legend"><span class="dot" style="background:#ff5d5d"></span>culled meshlet center &nbsp; <span class="dot" style="background:#39d98a"></span>kept &nbsp; · drag to orbit, wheel to zoom</div>
+<div id="err"></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

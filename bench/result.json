@@ -1,0 +1,42 @@
+{
+  "sample": {
+    "vertices": 24576,
+    "triangles": 49152,
+    "meshlets": 1679,
+    "maxVerts": 32,
+    "maxTris": 32
+  },
+  "views": 72,
+  "samples": 7,
+  "cold": {
+    "passMs": 19.939,
+    "buildMs": 205.71,
+    "culled": 39829,
+    "trisCulled": 1148603
+  },
+  "cone": {
+    "min": 9.0526,
+    "median": 9.4789,
+    "p95": 10.0154,
+    "max": 10.0154,
+    "stddev": 0.2886,
+    "rsd": 0.0305,
+    "culled": 39829,
+    "trisCulled": 1148603,
+    "tests": 120888
+  },
+  "exactBaseline": {
+    "min": 139.0871,
+    "median": 142.9852,
+    "p95": 177.9736,
+    "max": 177.9736,
+    "stddev": 15.7453,
+    "rsd": 0.1038,
+    "tests": 3538944
+  },
+  "speedupMedian": 15.08,
+  "testReduction": 29.3,
+  "cullRatePct": 32.46,
+  "exactCullRatePct": 44.82,
+  "generatedAt": "2026-11-20T06:26:15.585Z"
+}
